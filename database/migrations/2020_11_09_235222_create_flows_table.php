@@ -14,8 +14,23 @@ class CreateFlowsTable extends Migration
     public function up()
     {
         Schema::create('flows', function (Blueprint $table) {
-            $table->id();
+            $table->id('flow_id');
+            $table->string('identifier')->unique()->nullable();
+            $table->string('source_server');
+            $table->integer('source_app');
+            $table->string('target_server')->nullable();
+            $table->integer('target_app')->nullable();
+            $table->string('file_path')->nullable();
+            $table->integer('stage');
+            $table->text('description')->nullable();
+            $table->string('tags');
             $table->timestamps();
+
+            $table->foreign('source_server')->references('identifier')->on('server');
+            $table->foreign('source_app')->references('icto')->on('application');
+            $table->foreign('target_server')->references('identifier')->on('server');
+            $table->foreign('target_app')->references('icto')->on('application');
+            $table->foreign('stage')->references('stage_id')->on('stage');
         });
     }
 
