@@ -17,6 +17,12 @@ class CreateServerTypesTable extends Migration
             $table->id('server_type_id');
             $table->string('type');
         });
+
+        DB::table('server_types')->insert([
+            ['type' => 'Mainframe'],
+            ['type' => 'Windows'],
+            ['type' => 'Linux'],
+        ]);
     }
 
     /**
