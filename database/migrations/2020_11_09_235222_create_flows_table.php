@@ -26,11 +26,11 @@ class CreateFlowsTable extends Migration
             $table->string('tags');
             $table->timestamps();
 
-            $table->foreign('source_server')->references('identifier')->on('server');
-            $table->foreign('source_app')->references('icto')->on('application');
-            $table->foreign('target_server')->references('identifier')->on('server');
-            $table->foreign('target_app')->references('icto')->on('application');
-            $table->foreign('stage')->references('stage_id')->on('stage');
+            $table->foreign('source_server')->references('identifier')->on('servers');
+            $table->foreign('source_app')->references('icto')->on('applications');
+            $table->foreign('target_server')->references('identifier')->on('servers');
+            $table->foreign('target_app')->references('icto')->on('applications');
+            $table->foreign('stage')->references('stage_id')->on('stages');
         });
     }
 

@@ -14,8 +14,8 @@ class CreateServerTypesTable extends Migration
     public function up()
     {
         Schema::create('server_types', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('server_type_id');
+            $table->string('type');
         });
     }
 
