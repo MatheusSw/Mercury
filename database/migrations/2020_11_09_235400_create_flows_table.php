@@ -16,21 +16,15 @@ class CreateFlowsTable extends Migration
         Schema::create('flows', function (Blueprint $table) {
             $table->id('flow_id');
             $table->string('identifier')->unique()->nullable();
-            $table->string('source_server');
-            $table->unsignedBigInteger('source_app');
-            $table->string('target_server')->nullable();
-            $table->unsignedBigInteger('target_app')->nullable();
+            $table->string('source_server')->constrained('servers','identifier');
+            $table->foreignId('source_app')->constrained('applications','icto');
+            $table->string('target_server')->nullable()->constrained('servers','identifier');
+            $table->foreignId('target_app')->nullable()->constrained('applications','icto');
             $table->string('file_path')->nullable();
-            $table->unsignedBigInteger('stage');
+            $table->foreignId('stage')->constrained('stages','stage_id');
             $table->text('description')->nullable();
             $table->string('tags');
             $table->timestamps();
-
-            $table->foreign('source_server')->references('identifier')->on('servers');
-            $table->foreign('source_app')->references('icto')->on('applications');
-            $table->foreign('target_server')->references('identifier')->on('servers');
-            $table->foreign('target_app')->references('icto')->on('applications');
-            $table->foreign('stage')->references('stage_id')->on('stages');
         });
     }
 
