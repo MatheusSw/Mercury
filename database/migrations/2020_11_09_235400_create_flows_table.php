@@ -17,11 +17,11 @@ class CreateFlowsTable extends Migration
             $table->id('flow_id');
             $table->string('identifier')->unique()->nullable();
             $table->string('source_server');
-            $table->integer('source_app');
+            $table->unsignedBigInteger('source_app');
             $table->string('target_server')->nullable();
-            $table->integer('target_app')->nullable();
+            $table->unsignedBigInteger('target_app')->nullable();
             $table->string('file_path')->nullable();
-            $table->integer('stage');
+            $table->unsignedBigInteger('stage');
             $table->text('description')->nullable();
             $table->string('tags');
             $table->timestamps();

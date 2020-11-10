@@ -16,7 +16,7 @@ class CreateServersTable extends Migration
         Schema::create('servers', function (Blueprint $table) {
             $table->string('identifier')->primary();
             $table->text('description');
-            $table->integer('type');
+            $table->unsignedBigInteger('type');
 
             $table->foreign('type')->references('server_type_id')->on('server_types');
         });

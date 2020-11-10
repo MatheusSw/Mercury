@@ -14,9 +14,9 @@ class CreateApplicationsTable extends Migration
     public function up()
     {
         Schema::create('applications', function (Blueprint $table) {
-            $table->integer('icto')->primary();
+            $table->unsignedBigInteger('icto')->primary();
             $table->text('description');
-            $table->integer('type');
+            $table->unsignedBigInteger('type');
 
             $table->foreign('type')->references('server_type_id')->on('server_types');
         });
