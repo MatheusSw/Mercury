@@ -26,3 +26,4 @@ Homestead.json
 programmatic-types.graphql
 schema-directives.graphql
 _lighthouse_ide_helper.php
+.idea
