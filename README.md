@@ -1,10 +1,10 @@
 # Mercury
 Mercury goal is to make managing Axway CFTs flows flawless, helping you from creating flows to monitoring them and generating JCL.
 
-## UI Planning on [Dribble](https://dribbble.com/shots/14648215-Mercury)
+### UI Planning on [Dribble](https://dribbble.com/shots/14648215-Mercury)
 ![UI Home](https://cdn.dribbble.com/users/5832698/screenshots/14648215/media/b5b6804dfe87d6f7941b6a43d1e941f9.jpg)
 
-## Database Definition still WIP
+### [Database Definition still WIP](https://raw.githubusercontent.com/MatheusSw/Mercury/main/Database%20Design.svg)
 ![Image of Database definition (WIP)](https://raw.githubusercontent.com/MatheusSw/Mercury/main/Database%20Design.svg)
 
 [![Build Status](https://img.shields.io/travis/gothinkster/laravel-realworld-example-app/master.svg)](https://travis-ci.org/gothinkster/laravel-realworld-example-app) [![Gitter](https://img.shields.io/gitter/room/realworld-dev/laravel.svg)](https://gitter.im/realworld-dev/laravel) [![GitHub stars](https://img.shields.io/github/stars/gothinkster/laravel-realworld-example-app.svg)](https://github.com/gothinkster/laravel-realworld-example-app/stargazers) [![GitHub license](https://img.shields.io/github/license/gothinkster/laravel-realworld-example-app.svg)](https://raw.githubusercontent.com/gothinkster/laravel-realworld-example-app/master/LICENSE)
