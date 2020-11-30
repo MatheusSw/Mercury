@@ -6,10 +6,15 @@
     <meta name="description" content="Mercury"> <!-- Add more text -->
     <meta name="author" content="MatheusSw">
 
+    <link rel="stylesheet" href="https://use.typekit.net/zbt3frp.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+
     <title>Mercury</title> <!-- Add blade layout for page name e.g: Mercury - Home -->
 </head>
 
-<body>
+<body class="text-primary">
 <div id="root"></div>
 </body>
 

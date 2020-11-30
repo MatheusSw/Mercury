@@ -1,18 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 function Example() {
     return (
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="card">
-                        <div className="card-header">Example Component</div>
+        <div className="antialiased h-screen">
+            <header className="ml-28 mt-10">
+                <h1 className="text-5xl futura tracking-widest">Mercury</h1>
+            </header>
 
-                        <div className="card-body">I'm an example component!</div>
-                    </div>
-                </div>
-            </div>
+            {/*TODO Extract component*/}
+            <input type="text" id="inpa" placeholder="Somethingsomething"
+                   className="bg-white border-2 border-caramel rounded-md px-2 py-1 shadow-control text-sm"/>
+            <fieldset
+                className="flex flex-col justify-between shadow-control border-2 rounded-md border-caramel w-80 p-5">
+
+            </fieldset>
         </div>
     );
 }

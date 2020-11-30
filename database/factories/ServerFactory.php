@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Server;
+use App\Models\ServerType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ServerFactory extends Factory
@@ -22,7 +23,9 @@ class ServerFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'identifier' => $this->faker->lexify(str_repeat('?', 20)),
+            'description' => $this->faker->text,
+            'type' => ServerType::all(),
         ];
     }
 }

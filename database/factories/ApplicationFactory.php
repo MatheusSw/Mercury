@@ -22,7 +22,9 @@ class ApplicationFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'icto' => $this->faker->randomNumber(),
+            'name' => $this->faker->lexify('?????'),
+            'short' => $this->faker->lexify('???'),
         ];
     }
 }
